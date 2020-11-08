@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/shamseen/adopt-me/issues"
   },
-  "homepage": "https://github.com/shamseen/adopt-me#readme"
+  "homepage": "https://github.com/shamseen/adopt-me#readme",
+  "devDependencies": {
+    "prettier": "^2.1.2"
+  }
 }

@@ -1,10 +1,10 @@
 
 // creating a "rubber stamp" but not using it
-const Pet = () => {
+const Pet = (props) => {
     return React.createElement("div", {}, [
-        React.createElement('h1', {}, 'Naabi'),
-        React.createElement('h2', {}, 'Cat'),
-        React.createElement('h2', {}, 'Korat?'),
+        React.createElement('h1', {}, props.name),
+        React.createElement('h2', {}, props.animal),
+        React.createElement('h2', {}, props.breed),
     ])
 }
 
@@ -17,9 +17,22 @@ const App = () => {
         { id: 'logo' },
         [
             React.createElement("h1", {}, "Adopt Me!"),
-            React.createElement(Pet),
-            React.createElement(Pet),
-            React.createElement(Pet)
+
+            React.createElement(Pet, {
+                name: 'Naabi',
+                animal: 'Cat',
+                breed: 'Korat?'
+            }),
+            React.createElement(Pet, {
+                name: 'Jojo',
+                animal: 'Cat',
+                breed: 'Himalayan'
+            }),
+            React.createElement(Pet, {
+                name: 'Jayjay',
+                animal: 'Dog',
+                breed: 'Shi-tzu'
+            })
         ]);
 }
 

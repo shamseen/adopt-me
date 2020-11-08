@@ -21,28 +21,8 @@
     <!-- DOM allows to render to browser -->
     <script src='https://unpkg.com/react-dom@16.8.4/umd/react-dom.development.js'></script>
 
-    <script>
-
-        // creating a "rubber stamp" but not using it
-        const App = () => {
-
-            // stamps div containing an h1
-            // params: tag, attributes, children
-            return React.createElement(
-                "div",
-                { id: 'logo' },
-                React.createElement("h1", {}, "Adopt Me!")
-            );
-        }
-
-        // rendering to div we named root - using the stamp
-        // render() overrides anything contained in element
-        ReactDOM.render(
-            React.createElement(App),
-            document.getElementById('root')
-        );
-
-    </script>
+    <!-- importing JS code -->
+    <script src="./App.js"></script>
 </body>
 
 </html>

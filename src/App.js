@@ -1,3 +1,6 @@
+import React from 'react';
+import {render} from 'react-dom';
+
 
 // creating a "rubber stamp" but not using it
 const Pet = ({ name, animal, breed }) => {
@@ -38,7 +41,7 @@ const App = () => {
 
 // rendering to div we named root - using the stamp
 // render() overrides anything contained in element
-ReactDOM.render(
+render(
     React.createElement(App),
     document.getElementById('root')
 );

@@ -1,39 +1,20 @@
-import React from 'react';
-import {render} from 'react-dom';
-import Pet from './Pet';
+import React from "react";
+import { render } from "react-dom";
+import Pet from "./Pet";
 
-
+// stamp
 const App = () => {
 
-    // stamps div containing an h1 and pet components
-    // params: tag, attributes, children
-    return React.createElement(
-        "div",
-        { id: 'logo' },
-        [
-            React.createElement("h1", {}, "Adopt Me!"),
-
-            React.createElement(Pet, {
-                name: 'Naabi',
-                animal: 'Cat',
-                breed: 'Korat?'
-            }),
-            React.createElement(Pet, {
-                name: 'Jojo',
-                animal: 'Cat',
-                breed: 'Himalayan'
-            }),
-            React.createElement(Pet, {
-                name: 'Jayjay',
-                animal: 'Dog',
-                breed: 'Shi-tzu'
-            })
-        ]);
-}
+  return (
+    <div>
+      <h1 id='logo'>Adopt Me!</h1>
+      <Pet name="Naabi" animal="Cat" breed="Korat?" />
+      <Pet name="Joho" animal="Cat" breed="Himalayan" />
+      <Pet name="Jayjay" animal="Dog" breed="Shih-tzu" />
+    </div>
+  );
+};
 
 // rendering to div we named root - using the stamp
 // render() overrides anything contained in element
-render(
-    React.createElement(App),
-    document.getElementById('root')
-);
+render(<App />, document.getElementById("root"));
